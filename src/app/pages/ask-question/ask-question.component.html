@@ -1,0 +1,76 @@
+<div class="container">
+  <h1>Faca uma pergunta</h1>
+  <div class="alert alert-primary" role="alert">
+    <p>
+      Escrevendo uma boa pergunta Você está pronto para fazer uma pergunta
+      relacionada à programação e este formulário o ajudará a orientá-lo durante
+      o processo. Quer fazer uma pergunta não relacionada à programação? Veja os
+      tópicos aqui para encontrar um site relevante.
+    </p>
+    <p><strong>Passos</strong></p>
+    <ul>
+      <li>Resuma seu problema em um título de uma linha.</li>
+      <li>Descreva seu problema com mais detalhes.</li>
+      <li>Descreva o que você tentou e o que esperava que acontecesse.</li>
+      <li>
+        Adicione “tags” que ajudam a divulgar sua pergunta aos membros da
+        comunidade.
+      </li>
+      <li>Revise sua pergunta e poste-a no site.</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Titulo</h5>
+      <div class="form-group">
+        <input
+          class="form-control"
+          placeholder="Titulo"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Quais são os detalhes do seu problema?</h5>
+      <div class="NgxEditor__Wrapper">
+        <ngx-editor-menu [editor]="editorProblem"> </ngx-editor-menu>
+        <ngx-editor
+          [editor]="editorProblem"
+          (ngModel)="(htmlProblem)"
+          [placeholder]="'Type here...'"
+        ></ngx-editor>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">O que você tentou e o que esperava?</h5>
+      <div class="NgxEditor__Wrapper">
+        <ngx-editor-menu [editor]="editorSolution"> </ngx-editor-menu>
+        <ngx-editor
+          [editor]="editorSolution"
+          [(ngModel)]="htmlSolution"
+          [placeholder]="'Type here...'"
+        ></ngx-editor>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-body">
+      <h5 class="card-title">Tags</h5>
+      <div class="form-group">
+        <input [(ngModel)]="newTag" (keyup.enter)="addTag()" (keyup.backspace)="removeLastTag()"
+          class="form-control"  [placeholder]="tags.length ? '' : 'Adicione uma tag'"
+        />
+        <div *ngFor="let tag of tags" class="tag">
+          {{ tag }}
+          <span class="close" (click)="removeTag(tag)">X</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button (click)="sendAsk()" type="button" class="btn btn-primary">Postar pergunta</button>
+</div>

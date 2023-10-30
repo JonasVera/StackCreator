@@ -1,0 +1,42 @@
+<div>
+  <div class="header">
+    <h1>Tags</h1>
+    <p>Uma tag é uma palavra-chave ou rótulo que categoriza sua pergunta com outras perguntas semelhantes. Usar as tags
+      certas torna mais fácil para outras pessoas encontrarem e responderem à sua pergunta. </p>
+  </div>
+  <div class="filter-tag">
+    <div class="input-group search-container has-validation">
+      <span class="input-group-text" id="inputGroupPrepend"><i class="fa text-primary fa-search"></i></span>
+      <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend"
+             required>
+      <div class="invalid-feedback">
+        Buscar por tag
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3 mb-0" *ngFor="let tag of tags">
+      <div class="card">
+        <div class="card-body">
+          <i class="tag">{{ tag.nomeTag }}</i>
+          <p class="card-text text-description">{{ tag.descricao }}</p>
+          <div class="question-info">
+            <span class="card-text">Perguntas </span>
+            <span>{{ tag.questions }}</span>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <nav aria-label="Page navigation example">
+      <ul class="pagination justify-content-end">
+        <li class="page-item"><a class="page-link" href="#">Previous</a></li>
+        <li class="page-item"><a class="page-link" href="#">1</a></li>
+        <li class="page-item"><a class="page-link" href="#">2</a></li>
+        <li class="page-item"><a class="page-link" href="#">3</a></li>
+        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+      </ul>
+    </nav>
+  </div>
+
+</div>

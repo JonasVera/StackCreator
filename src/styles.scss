@@ -1,0 +1,69 @@
+/* Reset básico */
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+@import '~font-awesome/css/font-awesome.css';
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import '~quill/dist/quill.bubble.css';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  /* Definir uma fonte base, tamanho e cor de texto */
+  body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    color: #333;
+  }
+
+  /* Remover decorações de link */
+  a {
+    text-decoration: none;
+  }
+
+  /* Remover list-style de listas não ordenadas e ordenadas */
+  ul, ol {
+    list-style: none;
+  }
+
+  /* Remover margens e preenchimento padrão de elementos de lista */
+  li {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Remover estilos de borda em elementos focados */
+  :focus {
+    outline: none;
+  }
+  /* Definir tamanhos de fonte, estilos e cores padrão */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Pode variar de acordo com suas preferências */
+  }
+
+  p {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* Pode variar de acordo com suas preferências */
+  }
+
+  /* Exemplo de cor de texto padrão para todo o texto na página */
+  body {
+    color: #333; /* Cor de texto padrão (pode ser personalizada) */
+  }
+
+
+.border-bottom{
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+/* Importing Bootstrap SCSS file. */
+@import "custom-colors";
+@import 'bootstrap/scss/bootstrap';
+
+
+pre{
+  border-radius: 5px;
+  background-color: #eeeeee;
+}

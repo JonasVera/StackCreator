@@ -1,0 +1,54 @@
+
+.user {
+  img {
+    margin-right: 20px;
+    border-radius: 10px;
+    width: 150px;
+  }
+
+  display: flex;
+  justify-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+
+  .user-info-login {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+
+    i, span {
+      margin-right: 10px;
+      opacity: 0.5;
+    }
+
+  }
+}
+
+.btn-edit-profile {
+  height: 50px;
+}
+
+.tabs-profile {
+  margin-top: 30px;
+  cursor: pointer;
+
+  span {
+    border-radius: 8px;
+    transition: 0.5ms;
+    padding: 5px;
+    margin-right: 15px;
+  }
+}
+
+span:hover {
+  background: #eeeeee;
+
+}
+
+.tab-active {
+  color: #ffffff;
+  background: var(--bs-primary);
+}
+.tabs-container{
+  margin-top: 30px;
+}

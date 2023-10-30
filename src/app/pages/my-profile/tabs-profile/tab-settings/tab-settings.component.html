@@ -1,0 +1,18 @@
+<div class="container-fluid">
+  <div class="row">
+
+    <div class="col-3 ">
+      <div *ngFor="let category of menuSections" class="section-menu">
+        <h6>{{ category.category }}</h6>
+        <div class="menu-profile-settings">
+          <span *ngFor="let item of category.items" [ngClass]="{'menu-active': item.active}"
+                (click)="toggleItemActivation(category.category, item.label)">{{ item.label }}</span>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <sc-edit-profile-section *ngIf="menuSection.label === 'Editar Perfil'"></sc-edit-profile-section>
+      <sc-delete-profile *ngIf="menuSection.label === 'Excluir Perfil'"></sc-delete-profile>
+    </div>
+  </div>
+</div>

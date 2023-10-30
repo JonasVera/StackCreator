@@ -1,0 +1,36 @@
+
+
+.root {
+  position: fixed;
+  margin-top: 90px;
+  height: 100%;
+  border-right: rgb(0, 0, 0, 0.2) solid 1px;
+  .menu {
+    opacity: 0.8;
+    padding-left: 10px;
+    ul {
+      margin-top:5px;
+      li {
+        padding:5px;
+        button {
+          i {
+            opacity: 0.8;
+            margin-right: 20px;
+          }
+          justify-content: space-evenly;
+        }
+      }
+    }
+  }
+}
+
+button:hover,
+li:hover {
+  background-color: var(--primary-color);
+  opacity: 0.3;
+}
+
+.button-select {
+  background-color: var(--bs-primary);
+  border-right: 3px solid  var(--bs-secondary);
+}

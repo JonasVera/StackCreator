@@ -1,0 +1,31 @@
+<div class="root">
+  <div class="header-page border-bottom">
+    <div>
+      <div class="title-header">
+        <h1>Image Rotates In The Opposite Direction Of a pymunk Body</h1>
+        <button routerLink="/ask-question" class="btn btn-primary">Pergunte</button>
+      </div>
+      <div class="info-question">
+        <span>Respondido: hoje</span>
+        <span>Visualizacoes: 1k</span>
+      </div>
+    </div>
+  </div>
+  <sc-question-view-item></sc-question-view-item>
+  <div  class="border-bottom nswer-questions">
+    <h3>1 Respostas</h3>
+    <div class="answer-question"> 
+      <sc-answer-question-item></sc-answer-question-item>
+  </div>
+  </div>
+  
+  <div class="your-answer">
+    <h3>Sua Resposta</h3>
+    <div class="NgxEditor__Wrapper">
+      <ngx-editor-menu [editor]="editor"> </ngx-editor-menu>
+      <ngx-editor  [editor]="editor" (ngModel)='html' [placeholder]="'Type here...'"></ngx-editor>
+    </div>
+    <button class="btn btn-primary">Postar Respsota</button>
+  </div>
+
+</div>

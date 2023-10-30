@@ -1,0 +1,29 @@
+<div class="container-fluid">
+  <div class="user">
+    <img
+      src="https://lh3.googleusercontent.com/a/ACg8ocLhXQ8nbYCXlxpsNl4YIeqGGn_YTHCA21dren9EaEulQF5i=k-s256" alt="">
+    <div class="bg-center">
+      <h1>Jonas</h1>
+      <div class="user-info-login">
+        <span><i class="fa fa-birthday-cake"></i> Membro a 2 dias</span>
+        <span><i class="fa fa-calendar"></i> Visita a 2 dias consecutivos</span>
+      </div>
+    </div>
+
+    <button type="button" class="btn-edit-profile btn btn-outline-primary">Editar Perfil</button>
+  </div>
+
+  <div class="tabs-profile">
+    <div class="tabs-profile">
+      <span *ngFor="let tab of tabStates" [class.tab-active]="tab.active"
+            (click)="toTab(tab.label)">{{ tab.label }}</span>
+    </div>
+  </div>
+  <div class="tabs-container">
+
+    <sc-tab-profile *ngIf="tabActive.label == 'Perfil' "></sc-tab-profile>
+    <sc-tab-settings *ngIf="tabActive.label == 'Configuracoes'"></sc-tab-settings>
+
+  </div>
+</div>
+

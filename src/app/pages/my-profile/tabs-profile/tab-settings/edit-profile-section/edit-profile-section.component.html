@@ -1,0 +1,27 @@
+<div>
+  <h3> Edite seu perfil</h3>
+  <hr>
+  <div class="mb-3 card">
+    <div class="card-body">
+      <div [ngStyle]="{'background-image': 'url(' + urlImage + ')'}" class="profile-photo">
+        <button >Escolher Foto</button>
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Nome display</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Digite seu nome">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Titulo</label>
+        <input type="email" class="form-control" placeholder="">
+      </div>
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Sobre</label>
+        <div class="NgxEditor__Wrapper">
+          <ngx-editor-menu [editor]="editor"></ngx-editor-menu>
+          <ngx-editor [editor]="editor"  [(ngModel)]='html' [placeholder]="'Type here...'"></ngx-editor>
+        </div>
+      </div>
+    </div>
+  </div>
+  <button class="mb-3 btn btn-primary">Salvar Perfil</button>
+</div>

@@ -1,0 +1,27 @@
+section{
+    margin-top: 20px;
+}
+.actions{
+    font-size: 12px;
+    button{
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+}
+.htmlview{
+    font-size: 20px;
+}
+.tags {
+    margin-bottom: 10px;
+    display: flex;
+    span {
+      font-weight: 100;
+      font-size: 12px;
+      padding-left: 5px;
+      padding-right: 5px;
+      margin: 3px;
+      border-radius: 5px;
+      color: #007bff;
+      background: #c0dbf8;
+    }
+  }

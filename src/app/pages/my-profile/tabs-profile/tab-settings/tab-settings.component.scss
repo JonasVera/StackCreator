@@ -1,0 +1,38 @@
+.stats-item{
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  .title{
+    font-size: 12px;
+    opacity: 0.8;
+  }
+}
+
+
+.section-menu{
+  margin-bottom: 20px;
+}
+.menu-profile-settings{
+  font-size: 12px;
+  display: flex;
+  flex-direction: column;
+}
+span {
+  border-radius: 8px;
+  transition: 0.5ms;
+  padding: 5px;
+  margin-right: 15px;
+}
+
+span:hover {
+  background: #eeeeee;
+
+}
+
+.menu-active {
+  color: #ffffff;
+  background: var(--bs-primary);
+}
+.tabs-container{
+  margin-top: 30px;
+}

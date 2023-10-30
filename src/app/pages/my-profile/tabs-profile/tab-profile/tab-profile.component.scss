@@ -1,0 +1,20 @@
+.stats-item{
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  .title{
+    font-size: 12px;
+    opacity: 0.8;
+  }
+}
+.stats-group{
+  display: flex;
+  flex-direction: row;
+}
+.pendent{
+  background: #eeeeee;
+}
+
+.item-information {
+  margin-bottom: 30px;
+}
